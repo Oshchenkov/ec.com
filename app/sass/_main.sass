@@ -1,0 +1,87 @@
+/*=====================================================*/
+/*==================  User style  =====================*/
+/*=====================================================*/
+
+.general-container
+	font-family: $regular-font
+	&>*
+		background-color: #ccc
+
+
+
+.header,
+.main,
+.footer
+	position: relative
+
+.header
+	grid-area: header
+.main
+	grid-area: main
+	//min-height: calc( 100vh - 150px )
+.footer
+	grid-area: footer
+
+// top-header
+.top-headerBg
+	background-color: $mainAccent-color
+.top-header
+	display: grid
+	grid-template-columns: repeat( 2, 1fr )
+	height: 36px
+	overflow: hidden
+	&__campusLink
+		justify-self: start
+		color: $lightfont-color
+		text-decoration: none
+		font-family: $regular-font
+		font-size: 14px
+		padding: 10px 0
+		position: relative
+		&-text
+			position: relative
+			padding-right: 22px
+		&-text i
+			font-size: 14px
+			transform: rotate(45deg)
+			display: block
+			position: absolute
+			right: 0
+			top: 1px
+
+	&__loginBar
+		justify-self: end
+	&__loginBar-nav
+		list-style: none
+		display: grid
+		grid-template-columns: repeat( 2, max-content )
+	&__loginBar-li
+		position: relative
+		&:first-child:after
+			content: ''
+			display: block
+			width: 1px
+			background-color: #8cc9c3
+			top: 5px
+			bottom: 5px
+			right: 0
+			position: absolute
+			opacity: 0.4
+		&:last-child .top-header__loginBar-a
+				padding-right: 0
+	&__loginBar-a
+		color: $lightfont-color
+		text-decoration: none
+		font-family: $regular-font
+		font-size: 12px
+		padding: 12px 20px
+		position: relative
+		display: block
+		height: 36px
+
+//    main-header
+.main-headerBg
+	background-color: $lightBg-color
+.main-header
+	display: grid
+	grid-template-columns: minmax(max-content, 300px) 1fr

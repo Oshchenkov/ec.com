@@ -1,0 +1,38 @@
+@import "vars"
+/*=======================================================*/
+/*===================  Basic style  =====================*/
+/*=======================================================*/
+*
+	box-sizing: border-box
+	&:before, &:after
+		box-sizing: border-box
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.center
+	text-align: center
+
+.general-container
+	display: grid
+	grid-template-columns: 1fr
+	grid-template-areas: "header" "main" "footer"
+	grid-template-rows: minmax(50px, max-content) minmax( calc( 100vh - 100px ), max-content ) minmax(30px, max-content)
+	grid-gap: 0 20px
+	
+.container
+	max-width: 1200px
+	padding: 0 20px
+	margin: auto
+	position: relative
