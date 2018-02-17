@@ -24,7 +24,7 @@ gulp.task('sass', function(){
 	.pipe(sourcemaps.write())										// Add the map to modified source.
 	.pipe(gulp.dest('app/css'))
 	.pipe(rename({suffix: '.min', prefix : ''}))
-	.pipe(autoprefixer(['last 15 versions']))
+	.pipe(autoprefixer(['last 25 versions']))
 	.pipe(cleanCSS())														// Minimize css ( *.min.css )
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
