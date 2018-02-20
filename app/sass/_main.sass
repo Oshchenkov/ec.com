@@ -187,7 +187,7 @@
 	text-align: center
 	display: grid
 	grid-template-rows: 100px minmax( 35px, max-content) auto
-	padding: 0px 10px
+	padding: 0px 24px
 	&__img
 		align-self: center
 	&__title
@@ -224,7 +224,7 @@
 .slider-content
 	align-self: center
 	text-align: center
-	width: 50%
+	width: 60%
 	margin: 0 auto
 	z-index: 1
 	&__title
@@ -233,17 +233,16 @@
 		color: $grey-color
 		margin-bottom: 40px
 	&__text
-		font-family: $light-font
+		font-family: $lightItalic-font
 		font-size: 24px
 		color: $grey-color
+	&__text-signature
+		margin-top: 5%
+		font-size: 16px
+		& b
+			font-family: $semiboldItalic-font
 
-// .owl-nav
-// 	position: absolute
-// 	top: 0
-// 	bottom: 0
-// 	left: 0
-// 	right: 0
-// 	z-index: -1
+
 .owl-prev,
 .owl-next
 	position: absolute
@@ -526,4 +525,6 @@ input
 			font-family: $regular-font
 			font-size: 12px
 			color: $accent-color
-			padding: 10px 2px
+			padding: 10px 24px
+.footer__navLinks-li:last-child .footer__navLinks-a
+	padding-right: 0
