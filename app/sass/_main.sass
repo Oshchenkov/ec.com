@@ -163,12 +163,263 @@
 		font-family: $regular-font
 		color: $accent-color
 
+// TextImageSection
+.textImageSection
+	height: 220px
+	background-image: url('../images/word-cloud-no-text.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	position: relative
+
+
+//slider-section
+.slider-section
+	position: relative
+.owl-carousel__slide
+	background-color: $mainBgLighter-color
+
+.owl-carousel__slide
+	display: grid
+	position: relative
+	z-index: 1
+.slider-content
+	align-self: center
+	text-align: center
+	margin: 0 auto
+	z-index: 1
+	&__title
+		font-family: $light-font
+		color: $grey-color
+	&__text
+		font-family: $lightItalic-font
+		color: $grey-color
+	&__text-signature
+		& b
+			font-family: $semiboldItalic-font
+
+.owl-prev,
+.owl-next
+	position: absolute
+	width: 30px
+	height: 30px
+	overflow: hidden
+	text-indent: -999px
+	background-color: #fff
+	background-image: url('../images/svg-icons/slider-arrow.svg')
+	background-size: 8px
+	background-position: center
+	background-repeat: no-repeat
+	border-radius: 50%
+	z-index: 2
+	
+.owl-prev
+.owl-next
+	transform: rotate( 180deg )
+
+// gridSection
+
+.gridSection
+	display: grid
+	
+.gridSection__mobileText
+	align-self: center
+.gridSection__reportText
+	background-color: $mainBg-color
+
+.gridSection__mobileImage
+	background-image: url('../images/mobile-img.jpg')
+	background-repeat: no-repeat
+	background-position: 0 0
+	background-size: cover
+.gridSection__reportImage
+	background-image: url('../images/pcView.jpg')
+	background-repeat: no-repeat
+	background-position: 100% 0
+	background-size: cover
+
+.grid-title
+	font-family: $light-font
+	color: $grey-color
+.grid-text
+	color: $accent-color
+
+// menegementSection
+
+.menegementSection
+	overflow: hidden
+	display: grid
+.menegementSection__textBlock
+	align-self: center
+
+.menegementSection__imageBlock
+	background-image: url('../images/dashboard-img.png')
+	background-repeat: no-repeat
+
+
+// routingSection
+
+.routingSection
+	overflow: hidden
+	display: grid
+	background-color: $mainBg-color
+	&__imageBlock
+		background-repeat: no-repeat
+		background-size: contain
+		background-image: url('../images/settings-img.png')
+	&__textBlock
+		align-self: center
+
+// analyticsSection
+
+.analyticsSection
+	overflow: hidden
+	display: grid
+	&__textBlock
+		align-self: center
+
+	&__imageBlock
+		background-repeat: no-repeat
+		background-size: contain
+		background-image: url('../images/charts-img.jpg')
+
+// employeeSection
+
+.employeeSection
+	display: grid
+	background-color: $mainBg-color
+	
+.employeeSection__imageBlock
+	background-repeat: no-repeat
+	background-size: cover
+	background-image: url('../images/wall-siteview-img.jpg')
+
+.employeeSection__textBlock
+	align-self: center
+
+// wideSection
+
+.wideSection
+	display: grid
+	position: relative
+
+.wideSection__conteiner
+	align-self: center
+	text-align: center
+
+.wideSection__mainText
+	font-family: $lightItalic-font
+	color: $grey-color
+
+.wideSection__signatureText
+	font-family: $lightItalic-font
+	color: $grey-color
+
+// greySection
+
+.greySection
+	display: grid
+	background-color: $mainBgLighter-color
+
+.blockIcons
+	align-self: center
+
+.blockIcons__header
+	text-align: center
+	color: $accent-color
+
+.blockIcons__content
+	display: grid
+
+.blockIcons__contentIcon img
+	display: block
+	margin: auto
+	width: 100%
+	height: auto
+
+.blockIcons__contentInfo
+	&-title
+		color: $orange-color
+	&-text
+		color: $accent-color
+	&-signature
+		color: #969898
+
+
+// contactSection
+
+.contactSection
+	background-color: $mainBgDark-color
+	display: grid
+	&__title
+		font-family: $light-font
+		color: $lightfont-color
+
+.learnMore-form
+	display: grid
+	background-color: $accentLighter-color
+	margin: 0 auto
+	&__title
+		background-color: $accent-color
+		color: $lightfont-color
+		text-align: center
+		font-family: $bold-font
+		text-transform: uppercase
+	&__content
+		display: grid
+		background-color: $mainBg-color
+
+.learnMore-form__content-input
+	display: block
+	font-family: $lato-Semibold-font
+	color: #afbbbc
+
+
+.learnMore-form__content-input input
+	font-family: $lato-Semibold-font
+	color: $accent-color
+	background-color: $mainBg-color
+
+input
+	border: none
+	display: block
+	width: 100%
+	&:active,
+	&:focus,
+	&:hover
+		outline: none
+
+.learnMore-form__content-input.active
+	background-color: $lightBg-color
+.learnMore-form__content-input.active input
+	background-color: $lightBg-color
+
+.learnMore-form__btn
+	justify-self: center
 
 
 
+// -------------- Footer ---------------
 
+.footerBg
+	background-color: $lightBg-color
+.footer
+	display: grid
+	align-items: center
+	text-align: center
+	&__logo
+	&__copyright
+		font-size: 12px
 
-
+	&__navLinks
+		&-nav
+			list-style: none
+			display: grid
+		&-li
+		&-a
+			text-decoration: none
+			font-family: $regular-font
+			color: $accent-color
 
 
 

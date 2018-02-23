@@ -188,9 +188,221 @@
 		&__text
 			font-size: 16px
 
+	// TextImageSection
+	.textImageSection
+		margin-top: 30px
+	.textImageSection img
+		display: block
+		margin: auto
+		margin-left: -40px
+
+	//slider-section
+
+	.owl-carousel__slide
+		grid-template-rows: 280px
+	.slider-content
+		width: 80%
+		&__title
+			font-size: 26px
+			margin-bottom: 20px
+		&__text
+			font-size: 16px
+		&__text-signature
+			margin-top: 5%
+			font-size: 12px
+
+	.owl-prev,
+	.owl-next
+		top: calc( 50% - 30px/2 )
+
+	.owl-prev
+		left: 2%
+	.owl-next
+		right: 2%
+
+	// gridSection
+
+	.gridSection
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(4, minmax(280px, max-content))
+		
+	.gridSection__mobileText,
+	.gridSection__reportText
+		padding: 0 15px
+
+	.grid-title
+		font-size: 24px
+		margin-top: 20px
+		margin-bottom: 20px
+	.grid-text
+		font-size: 16px
+		padding-left: 5%
+		& p
+			margin-bottom: 10px
+
+	.gridSection__reportImage
+		grid-row: third-line / 4
+
+	// menegementSection
+
+	.menegementSection
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(2, minmax(280px, max-content))
+	.menegementSection__textBlock
+		padding: 0 15px
+
+	.menegementSection__imageBlock
+		background-position: center
+		background-size: contain
+
+	// routingSection
+
+	.routingSection
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(2, minmax(280px, max-content))
+		&__imageBlock
+			background-position: center
+			background-size: contain
+			grid-row: 2 / 3
+		&__textBlock
+			padding: 0 15px
+
+	// analyticsSection
+
+	.analyticsSection
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(2, minmax(280px, max-content))
+		&__textBlock
+			padding: 0 15px
+		&__imageBlock
+			background-position: center
+			background-size: contain
+
+	.grid-text__list
+		padding-left: 5%
+		margin-top: 10px
+
+	// employeeSection
+
+	.employeeSection
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(2, minmax(280px, max-content))
+		
+	.employeeSection__imageBlock
+		background-position: center
+		background-size: contain
+		grid-row: 2 / 3
+
+	.employeeSection__textBlock
+		padding: 0 15px
+
+	// wideSection
+
+	.wideSection
+		grid-template-rows: 280px
+
+	.wideSection__mainText
+		font-size: 20px
+		margin-bottom: 20px
+
+	.wideSection__signatureText
+		margin-bottom: 20px
+		font-size: 14px
+
+	// greySection
+
+	.greySection
+		padding: 0 0 20px 0
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(2, minmax(200px, max-content))
+
+	.blockIcons
+		padding: 0 15px
+
+	.blockIcons__header
+		margin-bottom: 20px
+		font-size: 22px
+
+	.blockIcons__content
+		grid-template-columns: 40% 60%
+
+	.blockIcons__contentIcon
+		position: relative
+
+	.blockIcons__contentIcon img
+		padding: 0	10px
+
+	.blockIcons__contentInfo
+		&-title
+			font-size: 20px
+			margin-bottom: 5px
+		&-text
+			font-size: 14px
+			margin-bottom: 10px
+		&-signature
+			font-size: 12px
+
+	// contactSection
+
+	.contactSection
+		&__title
+			font-size: 24px
+			margin-bottom: 20px
+			margin-top: 30px
+			text-align: center
+
+	.learnMore-form
+		margin-bottom: 30px
+		&__title
+			font-size: 20px
+			padding-top: 10px
+			padding-bottom: 15px
+		&__content
+			margin: 20px 
+
+	.learnMore-form__content-input
+		padding: 10px 10px 0 10px
+		font-size: 12px
+		border: 1px solid transparent
+		border-bottom: 1px solid #ced7d8
+		box-sizing: border-box
+
+	.learnMore-form__content-input input
+		font-size: 18px
+		padding: 0
+		margin-top: 5px
+
+
+	.learnMore-form__content-input.active
+		border: 1px solid $mainAccentLighter-color
+
+	.learnMore-form__btn
+		margin-bottom: 20px
 
 
 
+	// -------------- Footer ---------------
+
+	.footer
+		&__logo
+		&__copyright
+			font-size: 10px
+
+		&__navLinks
+			&-nav
+				grid-auto-flow: column
+			&-li
+			&-a
+				font-size: 12px
+				padding: 10px 24px
+	.footer__navLinks-li:last-child .footer__navLinks-a
+		padding-right: 0
+
+	.footer__logo
+		margin: 20px 0
+	.footer__copyright
+		grid-row: 3 / 4
+		margin: 20px 0
 
 
 
@@ -356,143 +568,101 @@
 
 
 	// TextImageSection
-	.textImageSection
+	.textImageSection 
 		height: 220px
 		width: 100%
-		background-image: url('../images/word-cloud.jpg')
-		background-repeat: no-repeat
-		background-position: center
-		background-size: cover
+		margin: 0
+	.textImageSection img
+		display: block
+		margin: auto
+		width: initial
+
 
 	//slider-section
-	.slider-section
-		position: relative
-	.owl-carousel__slide
-		background-color: $mainBgLighter-color
 
 	.owl-carousel__slide
-		display: grid
 		grid-template-rows: 380px
-		position: relative
-		z-index: 1
 	.slider-content
-		align-self: center
-		text-align: center
 		width: 60%
-		margin: 0 auto
-		z-index: 1
 		&__title
-			font-family: $light-font
 			font-size: 36px
-			color: $grey-color
 			margin-bottom: 40px
 		&__text
-			font-family: $lightItalic-font
 			font-size: 24px
-			color: $grey-color
 		&__text-signature
 			margin-top: 5%
 			font-size: 16px
 			& b
-				font-family: $semiboldItalic-font
-
 
 	.owl-prev,
 	.owl-next
-		position: absolute
-		width: 30px
-		height: 30px
 		top: calc( 50% - 30px/2 )
-		overflow: hidden
-		text-indent: -999px
-		background-image: url('../images/sliderNav-next.png')
-		background-repeat: no-repeat
-		border-radius: 50%
-		z-index: 2
+
 	.owl-prev
 		left: 5%
-		transform: rotate(180deg);
 	.owl-next
 		right: 5%
 
 	// gridSection
 
 	.gridSection
-		display: grid
 		grid-template-columns: 1fr 1fr
 		grid-template-rows: repeat(2, minmax(570px, max-content))
 		
 	.gridSection__mobileText
-		align-self: center
 		padding-left: 10%
 		padding-right: 3%
 	.gridSection__reportText
-		background-color: $mainBg-color
 		padding: 15% 5% 10% 15%
 
-	.gridSection__mobileImage
-		background-image: url('../images/mobile-img.jpg')
-		background-repeat: no-repeat
-		background-position: 0 0
-		background-size: cover
-	.gridSection__reportImage
-		background-image: url('../images/pcView.jpg')
-		background-repeat: no-repeat
-		background-position: 100% 0
-		background-size: cover
-
 	.grid-title
-		font-family: $light-font
 		font-size: 36px
-		color: $grey-color
 		margin-bottom: 30px
 	.grid-text
 		font-size: 20px
-		color: $accent-color
 		padding-left: 5%
 		& p
 			margin-bottom: 20px
 
+	.gridSection__reportImage
+		grid-row: auto
+
 	// menegementSection
 
 	.menegementSection
-		overflow: hidden
-		display: grid
 		grid-template-columns: 45% 55%
 		grid-template-rows:  minmax(570px, max-content)
 	.menegementSection__textBlock
-		align-self: center
 		padding-left: 15%
 		padding-right: 3%
 
 	.menegementSection__imageBlock
-		background-image: url('../images/dashboard-img.png')
-		background-repeat: no-repeat
 		background-position: 0 40px
 		background-size: contain
 
 	// routingSection
 
 	.routingSection
-		@extend .menegementSection
-		background-color: $mainBg-color
+		grid-template-rows:  minmax(570px, max-content)
 		grid-template-columns: 55% 45%
 		&__imageBlock
-			@extend .menegementSection__imageBlock
-			background-image: url('../images/settings-img.png')
+			background-position: 0 40px
 		&__textBlock
-			@extend .menegementSection__textBlock
+			padding-right: 3%
 			padding-left: 10%
+	.routingSection__imageBlock
+		grid-row: auto
 
 	// analyticsSection
 
 	.analyticsSection
-		@extend .menegementSection
+		grid-template-columns: 45% 55%
+		grid-template-rows:  minmax(570px, max-content)
 		&__textBlock
-			@extend .menegementSection__textBlock
+			padding-left: 15%
+			padding-right: 3%
 		&__imageBlock
-			@extend .menegementSection__imageBlock
-			background-image: url('../images/charts-img.jpg')
+			background-position: 0 40px
 
 	.grid-text__list
 		padding-left: 5%
@@ -501,75 +671,68 @@
 	// employeeSection
 
 	.employeeSection
-		@extend .gridSection
+		grid-template-columns: 1fr 1fr
 		grid-template-rows: minmax(570px, max-content)
-		background-color: $mainBg-color
 		
 	.employeeSection__imageBlock
-		@extend .gridSection__reportImage
-		background-image: url('../images/wall-siteview-img.jpg')
+		background-position: 100% 0
+		grid-row: auto
+		background-size: cover;
 
 	.employeeSection__textBlock
-		@extend .menegementSection__textBlock
+		padding-left: 15%
+		padding-right: 3%
 
 	// wideSection
 
 	.wideSection
-		display: grid
 		grid-template-rows: 470px
-		position: relative
 
-	.wideSection__conteiner
-		align-self: center
-		text-align: center
 
 	.wideSection__mainText
-		font-family: $lightItalic-font
 		font-size: 24px
-		color: $grey-color
 		margin-bottom: 40px
 
 	.wideSection__signatureText
-		@extend .wideSection__mainText
+		margin-bottom: 40px
 		font-size: 16px
 
 	// greySection
 
 	.greySection
-		display: grid
+		padding: 0
 		grid-template-columns: 1fr 1fr
 		grid-template-rows: 310px
-		background-color: $mainBgLighter-color
 
 	.blockIcons
-		align-self: center
 		padding: 0 20px
 
 	.greySection__keyBlock
 		justify-self: end
 
 	.blockIcons__header
-		text-align: center
 		margin-bottom: 30px
 		font-size: 24px
-		color: $accent-color
 
 	.blockIcons__content
-		display: grid
 		grid-template-columns: 110px 285px
+
+	.blockIcons__contentIcon
+		position: relative
+
+	.blockIcons__contentIcon img
+		padding: 0	10px
 
 	.blockIcons__contentInfo
 		&-title
-			color: $orange-color
 			font-size: 30px
 			margin-bottom: 5px
 		&-text
 			font-size: 18px
-			color: $accent-color
 			margin-bottom: 20px
 		&-signature
 			font-size: 14px
-			color: #969898
+			margin-bottom: 0
 
 	.greySection__sexualBlock
 		justify-self: start
@@ -577,104 +740,64 @@
 	// contactSection
 
 	.contactSection
-		background-color: $mainBgDark-color
-		display: grid
 		height: 730px
 		&__title
-			font-family: $light-font
 			font-size: 30px
-			color: $lightfont-color
 			margin-bottom: 50px
 
 	.learnMore-form
-		display: grid
-		background-color: $accentLighter-color
 		width: 420px
-		margin: 0 auto
 		&__title
-			background-color: $accent-color
-			color: $lightfont-color
-			text-align: center
-			font-family: $bold-font
 			font-size: 24px
-			text-transform: uppercase
 			padding-top: 10px
 			padding-bottom: 15px
 		&__content
-			display: grid
-			background-color: $mainBg-color
 			margin: 20px 
 
 	.learnMore-form__content-input
-		display: block
 		padding: 10px 10px 0 10px
 		font-size: 14px
-		font-family: $lato-Semibold-font
-		color: #afbbbc
 		border: 2px solid transparent
 		border-bottom: 2px solid #ced7d8
 
 	.learnMore-form__content-input input
-		font-family: $lato-Semibold-font
-		color: $accent-color
 		font-size: 24px
 		padding: 2px 0
 		margin-top: 5px
-		background-color: $mainBg-color
 
-	input
-		border: none
-		display: block
-		width: 100%
-		&:active,
-		&:focus,
-		&:hover
-			outline: none
 
 	.learnMore-form__content-input.active
 		border: 2px solid $mainAccentLighter-color
-		background-color: $lightBg-color
-	.learnMore-form__content-input.active input
-		background-color: $lightBg-color
-
 
 	.learnMore-form__btn
-		justify-self: center
 		margin-bottom: 20px
 
 
 
 	// -------------- Footer ---------------
 
-	.footerBg
-		background-color: $lightBg-color
 	.footer
 		height: 280px
-		display: grid
 		grid-template-columns: max-content auto max-content
-		align-items: center
 		&__logo
 		&__copyright
-			justify-self: center
-			color: $accent-color
-			font-family: $regular-font
 			font-size: 12px
 
 		&__navLinks
 			&-nav
-				list-style: none
-				display: grid
 				grid-auto-flow: column
 			&-li
 			&-a
-				text-decoration: none
-				font-family: $regular-font
 				font-size: 12px
-				color: $accent-color
 				padding: 10px 24px
 	.footer__navLinks-li:last-child .footer__navLinks-a
 		padding-right: 0
 
+	.footer__logo
+		margin: auto
+	.footer__copyright
+		grid-row: auto
+		margin: auto
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1280px)
