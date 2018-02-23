@@ -23,21 +23,8 @@ $(document).ready(function(){
 
   // Scroll to element and focus
 
-/*  $("[data-scroll-to]").click(function() {
-	  var $this = $(this),
-	      $toElement      = $this.attr('data-scroll-to'),
-	      $focusElement   = $this.attr('data-scroll-focus'),
-	      $offset         = $this.attr('data-scroll-offset') * 1 || 0,
-	      $speed          = $this.attr('data-scroll-speed') * 1 || 500;
 
-	  $('html, body').animate({
-	    scrollTop: $($toElement).offset().top + $offset
-	  }, $speed);
-	  
-	  if ($focusElement) $($focusElement).focus();
-	});*/
-
-  $('a[href*="#"]')
+  $(' a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -50,29 +37,58 @@ $(document).ready(function(){
     ) {
       // Figure out element to scroll to
       var target = $(this.hash);
+      
+      headerHeight = $(".main-headerBg").height(); // Get fixed header height
+
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
       // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
+          scrollTop: target.offset().top - headerHeight
+        }, 1000 );
+        //return false;
       }
     }
   });
 
-  //
+  // Mobile btn
+  $(".main-headerLogo-mobile-burgerBtn").click(function(e){
+    e.preventDefault();
+    $(".main-headerMenu").toggleClass("on");
+    $(document).mouseup(function(e) 
+      {
+          var container = $(".main-header");
+
+          // if the target of the click isn't the container nor a descendant of the container
+          if (!container.is(e.target) && container.has(e.target).length === 0 )
+          {
+            $(".main-headerMenu").removeClass("on");
+          }
+      });
+    $(".main-headerMenu__nav").mouseup(function(){
+      $(".main-headerMenu").removeClass("on");
+    });
+  });
+
+  // Fixed main menu on scroll
+
+  $(window).scroll(function(){
+    fixedHeader();
+  });
+  fixedHeader();
+  
+
+  function fixedHeader(){
+    if ($(window).scrollTop() >= 36) {
+       $(".main-headerBg").addClass("fixed-header");
+       $(".main").addClass("fixed-header");
+    }
+    else {
+       $(".main-headerBg").removeClass("fixed-header");
+       $(".main").removeClass("fixed-header");
+    }
+  }
 
 });
