@@ -38,7 +38,7 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
+
 	.container
 		max-width: 100%
 		padding: 0 15px
@@ -404,6 +404,104 @@
 		grid-row: 3 / 4
 		margin: 20px 0
 
+	// -----------------------------------
+	// ------------ ABOUT ----------------
+	// -----------------------------------
+
+	.leaderShipSection
+		margin-bottom: 30px
+	.leaderShipSection__title
+		font-size: 30px
+
+	.leaderShipSection__container
+		grid-gap: 30px 0
+
+	.leaderShipBlock
+		text-decoration: none
+		width: 220px
+
+	.leaderShip__img
+		margin-bottom: 10px
+	.leaderShip__name
+		font-size: 16px
+		margin-bottom: 5px
+	.leaderShip__position
+		font-size: 16px
+
+	// -----------------------------------
+	// ------------ Log In ---------------
+	// -----------------------------------
+	.top-header__backLink
+		font-family: $regular-font
+		font-size: 14px
+		color: $lightfont-color
+		position: relative
+		padding: 10px 0
+		display: block
+		justify-self: start
+		text-decoration: none
+	.top-header__backLink-text
+		padding-left: 20px
+	.top-header__backLink img
+		display: block
+		position: absolute
+		width: 11px
+		left: 0
+		top: 12px
+
+
+	.loginSection
+
+	.loginSection__titleBg
+		background-color: #fff
+	.loginSection__contentBg
+		background-color: $grey-bgColor
+
+	.loginSection__title
+		font-family: $light-font
+		font-size: 24px
+		color: $grey-color
+		text-transform: uppercase
+		margin: 50px auto 20px auto
+		padding-left: 40px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			width: 36px
+			height: 36px
+			background-image: url('../images/logo-mini.png')
+			background-repeat: no-repeat
+			top: -4.5px
+			left: 0
+
+	.loginForm
+	.loginForm__input		
+		padding: 10px 10px 0 10px
+		font-size: 14px
+		border: 2px solid transparent
+		color: #afbbbc
+		font-family: $lato-Semibold-font
+		font-size: 14px
+		display: block
+	.loginForm__input	input
+		font-size: 24px
+		padding: 2px 0
+		margin-top: 5px
+		display: block
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -414,31 +512,49 @@
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
 	/**/
+	.benefitsSection-contentBox *
+		max-width: 350px
+		margin: auto
+
+	.employeeSection__imageBlock
+		background-size: cover
+
+	.greySection
+		padding: 0
+
+	.blockIcons
+		padding: 30px 15px
+	.blockIcons:first-child
+		padding-bottom: 0
+	.blockIcons__content
+		grid-template-columns: 35% 60%
+		overflow: hidden
+		grid-gap: 20px
+	.blockIcons__header
+		font-size: 26px
+	.blockIcons__contentInfo-title
+		font-size: 24px
+	.blockIcons__contentInfo-text
+		font-size: 16px
+	.blockIcons__contentInfo-signature
+		font-size: 14px
+	.blockIcons__contentIcon img
+		max-width: 150px
+
+	// -----------------------------------
+	// ------------ ABOUT ----------------
+	// -----------------------------------
+
+	.leaderShipSection__title
+		margin: 60px 0
+
+	.leaderShipSection__container
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 50px 0
 
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-	.container
-		max-width: 1200px
-		padding: 0 20px
-		margin: auto
-		position: relative
-
-	.general-container
-		font-family: $regular-font
-		display: grid
-		grid-template-columns: 1fr
-		grid-template-areas: "header" "main" "footer"
-		//grid-template-rows: [header-row-start] minmax(50px, max-content) [header-row-end mainContent-row-start] minmax( calc( 100vh - 394px ), max-content ) [mainContent-row-end footer-row-start] minmax(30px, max-content) [footer-row-end]
-
-		
-
 	// top-header
 
 	.top-header
@@ -451,7 +567,7 @@
 			font-size: 14px
 			padding: 10px 0
 			&-text
-				padding-right: 18px
+				padding-right: 20px
 
 		&__loginBar
 			justify-self: end
@@ -475,6 +591,84 @@
 		width: 11px
 		right: 0
 		top: 12px
+	
+	
+	// firstSection
+
+	.firstSection__headText
+		font-size: 30px
+		margin-top: 50px
+	.firstSection__text
+		font-size: 18px
+		width: 80%
+	.firstSection__text
+		margin-bottom: 20px
+
+	// slider-section
+
+	.slider-content__title
+		font-size: 30px
+	.slider-content__text
+		font-size: 20px
+	.slider-content__text-signature
+		font-size: 15px
+
+	// gridSection
+
+	.grid-title
+		font-size: 30px
+	.grid-text p
+		font-size: 18px
+
+  // wideSection
+
+  .wideSection__mainText
+  	font-size: 22px
+	.wideSection__signatureText
+		font-size: 15px
+
+
+	// benefitsSection
+	.benefitsSection-content
+		grid-template-columns: 1fr 1fr
+	.benefitsSection-contentBox *
+		margin: 0 auto
+
+	// footer
+	
+	.footer__logo
+		margin: 30px 0
+	.footer__copyright
+		margin: 30px 0
+
+	// -----------------------------------
+	// ------------ ABOUT ----------------
+	// -----------------------------------
+
+	.leaderShipSection__container
+		grid-template-columns: repeat(3, 1fr)
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+	.container
+		max-width: 1200px
+		padding: 0 20px
+		margin: auto
+		position: relative
+
+	.general-container
+		font-family: $regular-font
+		display: grid
+		grid-template-columns: 1fr
+		grid-template-areas: "header" "main" "footer"
+		//grid-template-rows: [header-row-start] minmax(50px, max-content) [header-row-end mainContent-row-start] minmax( calc( 100vh - 394px ), max-content ) [mainContent-row-end footer-row-start] minmax(30px, max-content) [footer-row-end]
+
+		
+
+
 
 	//    main-header
 	.main-headerMenu-mobile
@@ -583,7 +777,7 @@
 	.owl-carousel__slide
 		grid-template-rows: 380px
 	.slider-content
-		width: 60%
+		width: 80%
 		&__title
 			font-size: 36px
 			margin-bottom: 40px
@@ -592,7 +786,6 @@
 		&__text-signature
 			margin-top: 5%
 			font-size: 16px
-			& b
 
 	.owl-prev,
 	.owl-next
@@ -798,6 +991,27 @@
 	.footer__copyright
 		grid-row: auto
 		margin: auto
+
+
+	// -----------------------------------
+	// ------------ ABOUT ----------------
+	// -----------------------------------
+
+	.leaderShipSection
+	.leaderShipSection__title
+		font-size: 36px
+		margin: 80px 0 100px 0
+
+	.leaderShipSection__container
+		grid-template-columns: repeat(4, 1fr)
+
+	.leaderShip__img
+		margin-bottom: 10px
+	.leaderShip__name
+		font-size: 16px
+		margin-bottom: 5px
+	.leaderShip__position
+		font-size: 16px
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1280px)

@@ -81,7 +81,7 @@ $(document).ready(function(){
   
 
   function fixedHeader(){
-    if ($(window).scrollTop() >= 36) {
+    if ($(window).scrollTop() >= 36) { // 36px height of top header
        $(".main-headerBg").addClass("fixed-header");
        $(".main").addClass("fixed-header");
     }
