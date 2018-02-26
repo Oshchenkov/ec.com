@@ -447,8 +447,98 @@ input
 	font-family: $light-font
 	color: $grey-color
 
+// -----------------------------------
+// ------------ Log In ---------------
+// -----------------------------------
+
+.top-header__backLink
+	font-family: $regular-font
+	color: $lightfont-color
+	position: relative
+	display: block
+	justify-self: start
+	text-decoration: none
+.top-header__backLink-text
+.top-header__backLink img
+	display: block
+	position: absolute
+	width: 11px
+	height: 11px
+	left: 0
+	top: 12px
+
+.loginSection
+.loginSection__titleBg
+	background-color: #fff
+.loginSection__contentBg
+	background-color: $grey-bgColor
+
+.loginSection__title
+	font-family: $light-font
+	color: $grey-color
+	text-transform: uppercase
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		width: 36px
+		height: 36px
+		background-image: url('../images/logo-mini.png')
+		background-repeat: no-repeat
+
+.loginForm
+.loginForm__input		
+	color: #afbbbc
+	font-family: $lato-Semibold-font
+	display: block
+	background-color: #fff
+.loginForm__input	input
+	display: block
+
+.loginFormLinks
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+.loginFormLinks__restoreLink
+	font-family: $regular-font
+	align-self: center
+.loginFormLinks__loginBtn
+	justify-self: end
 
 
+// -----------------------------------
+// ----- Check report status ---------
+// -----------------------------------
+
+.loginContentBlock
+.loginContentBlock__textP
+	color: $grey-color
+	font-family: $light-font
+.loginContentBlock__link
+	font-family: $lato-Semibold-font
+	color: $mainAccentLighter-color
+	display: block
+
+// -----------------------------------
+// ------------- Report --------------
+// -----------------------------------
+
+.loginTextForm
+.loginTextForm__textarea
+	width: 100%
+	overflow: auto
+	text-align: start
+	resize: none
+	outline: none
+	border: none
+	display: grid
+textarea::-webkit-input-placeholder
+	color: #afbbbc
+	font-family: $lato-Semibold-font
+
+.loginTextFormLinks
+	display: grid
+.loginTextFormLinks__startBtn
+	justify-self: end
 
 
 

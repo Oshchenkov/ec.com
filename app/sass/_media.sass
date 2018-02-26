@@ -431,78 +431,80 @@
 	// -----------------------------------
 	// ------------ Log In ---------------
 	// -----------------------------------
+
 	.top-header__backLink
-		font-family: $regular-font
 		font-size: 14px
-		color: $lightfont-color
-		position: relative
 		padding: 10px 0
-		display: block
-		justify-self: start
-		text-decoration: none
+		display: none
 	.top-header__backLink-text
 		padding-left: 20px
-	.top-header__backLink img
-		display: block
-		position: absolute
-		width: 11px
-		left: 0
-		top: 12px
 
 
 	.loginSection
-
 	.loginSection__titleBg
-		background-color: #fff
 	.loginSection__contentBg
-		background-color: $grey-bgColor
 
 	.loginSection__title
-		font-family: $light-font
-		font-size: 24px
-		color: $grey-color
-		text-transform: uppercase
+		font-size: 20px
 		margin: 50px auto 20px auto
 		padding-left: 40px
-		position: relative
+		padding-top: 3px
 		&:before
-			content: ''
-			position: absolute
-			width: 36px
-			height: 36px
-			background-image: url('../images/logo-mini.png')
-			background-repeat: no-repeat
 			top: -4.5px
 			left: 0
 
 	.loginForm
+		margin-top: 30px
+		margin-bottom: 20px
 	.loginForm__input		
-		padding: 10px 10px 0 10px
-		font-size: 14px
-		border: 2px solid transparent
-		color: #afbbbc
-		font-family: $lato-Semibold-font
-		font-size: 14px
-		display: block
+		font-size: 12px
+		padding: 6px 5px 2px 5px
 	.loginForm__input	input
 		font-size: 24px
+		padding: 4px 0 2px 0
+		font-size: 18px
 		padding: 2px 0
-		margin-top: 5px
-		display: block
+	.loginForm__input:first-child
+		border-bottom: 1px solid #ccc
 
+	.loginFormLinks
+		margin-bottom: 30px
+	.loginFormLinks__restoreLink
+		color: #a0a3a3
+		font-size: 12px
+	.loginFormLinks__loginBtn
+		padding: 6px 30px
+		font-size: 14px
 
+	// -----------------------------------
+	// ----- Check report status ---------
+	// -----------------------------------
 
+	.loginContentBlock
+		margin-top: 30px
+	.loginContentBlock__textP
+		font-size: 14px
+	.loginContentBlock__link
+		font-size: 12px
+		margin-top: 20px
 
+	// -----------------------------------
+	// ------------- Report --------------
+	// -----------------------------------
 
+	.loginTextForm
+		margin-top: 30px
+		margin-bottom: 30px
+	.loginTextForm__textarea
+		height: 60px
+		padding: 6px
+		margin-bottom: 20px
+	textarea::-webkit-input-placeholder
+		font-size: 12px
 
-
-
-
-
-
-
-
-
+	.loginTextFormLinks__startBtn
+		font-size: 14px
+		padding: 6px 30px
 
 
 
@@ -551,6 +553,49 @@
 	.leaderShipSection__container
 		grid-template-columns: repeat(2, 1fr)
 		grid-gap: 50px 0
+
+	// -----------------------------------
+	// ------------ Log In ---------------
+	// -----------------------------------
+
+	.loginSection__container.container,
+	.loginTopSection__container.container
+		max-width: 420px
+	.loginTopSection__container
+		overflow: visible
+
+	.loginSection__title
+		margin-left: -40px
+
+
+	.loginForm__input		
+		font-size: 14px
+		padding: 6px 10px 2px 10px
+	.loginForm__input input
+		font-size: 24px
+
+	.loginFormLinks__restoreLink
+		font-size: 14px
+
+	.loginFormLinks__loginBtn
+		font-size: 16px
+		padding: 15px 60px
+
+	// -----------------------------------
+	// ------------- Report --------------
+	// -----------------------------------
+
+	.loginTextForm__textarea
+		padding: 10px
+	textarea::-webkit-input-placeholder
+		font-size: 14px
+
+	.loginTextFormLinks__startBtn
+		font-size: 16px
+		padding: 15px 60px
+
+
+
 
 
 /* Small Devices, Tablets */
@@ -649,6 +694,12 @@
 		grid-template-columns: repeat(3, 1fr)
 
 
+	// -----------------------------------
+	// ------------ Log In ---------------
+	// -----------------------------------
+	
+	.top-header__backLink
+		display: block
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
@@ -997,6 +1048,7 @@
 	// ------------ ABOUT ----------------
 	// -----------------------------------
 
+
 	.leaderShipSection
 	.leaderShipSection__title
 		font-size: 36px
@@ -1012,6 +1064,56 @@
 		margin-bottom: 5px
 	.leaderShip__position
 		font-size: 16px
+
+
+	// -----------------------------------
+	// ------------ Log In ---------------
+	// -----------------------------------
+
+	.loginSection__title
+		margin-left: -50px
+		padding-left: 50px
+		font-size: 24px
+
+	.loginSection__title
+		margin-top: 150px
+
+	.loginForm
+		margin-top: 50px
+
+	// -----------------------------------
+	// ----- Check report status ---------
+	// -----------------------------------
+
+	.loginContentBlock
+		margin-top: 30px
+	.loginContentBlock+.loginForm
+		margin-top: 30px
+
+	.loginContentBlock__link
+		font-size: 14px
+	.loginContentBlock__textP
+		padding-bottom: 10px
+		font-size: 16px
+
+	// -----------------------------------
+	// ------------- Report --------------
+	// -----------------------------------
+	
+	.loginTextForm__textarea
+		height: 80px
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1280px)
