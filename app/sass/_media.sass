@@ -154,7 +154,8 @@
 			background-color: darken($lightBg-color, 10%)
 
 	// -------------- Main ---------------
-	.main.fixed-header
+	.home .main.fixed-header,
+	.about .main.fixed-header
 		margin-top: 64px
 	// firstSection
 
@@ -355,8 +356,8 @@
 		margin-bottom: 30px
 		&__title
 			font-size: 20px
-			padding-top: 10px
-			padding-bottom: 15px
+			padding-top: 20px
+			padding-bottom: 24px
 		&__content
 			margin: 20px 
 
@@ -756,7 +757,8 @@
 		&__li
 			text-transform: none
 			border: none
-			//margin: 0 -1px
+			&:first-child
+				border: none
 			
 		&__a
 			font-size: 14px
@@ -771,7 +773,8 @@
 			background-color: #fff
 
 	// -------------- Main ---------------
-	.main.fixed-header
+	.home .main.fixed-header,
+	.about .main.fixed-header
 		margin-top: 77px
 	// firstSection
 
@@ -993,8 +996,8 @@
 		width: 420px
 		&__title
 			font-size: 24px
-			padding-top: 10px
-			padding-bottom: 15px
+			padding-top: 24px
+			padding-bottom: 38px
 		&__content
 			margin: 20px 
 
@@ -1022,7 +1025,7 @@
 
 	.footer
 		height: 280px
-		grid-template-columns: max-content auto max-content
+		grid-template-columns: 30% auto 30%
 		&__logo
 		&__copyright
 			font-size: 12px
@@ -1119,7 +1122,34 @@
 @media only screen and (min-width : 1280px)
 
 	.container
-		max-width: 1360px
+		max-width: 1230px
+	.container-wide
+		max-width: 100%
+		padding: 0 2%
+		margin: auto
+
+	.main-headerBg>.container
+		overflow: initial
+	.main-headerLogo__img
+		margin-left: -46px
+	.main-headerLogo__text
+		margin-left: 0
+
+	.footerBg>.container
+		overflow: initial
+	.footer__logo
+		margin-left: -46px
+		margin-right: 46px
+
+	.gridSection__mobileText,
+	.menegementSection__textBlock,
+	.analyticsSection__textBlock
+		padding-left: 18%
+	.routingSection__textBlock
+		padding-right: 18%
+		padding-left: 0
+	.employeeSection__textBlock
+		padding-right: 18%
 
 @media only screen and (min-width : 1690px)
 	/**/
