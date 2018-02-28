@@ -17,6 +17,10 @@
 .footer
 	grid-area: footer
 
+.login .main
+	background-color: $grey-footerColor
+	min-height: calc( 100vh - 36px - 280px ) // 36px - very top header and 280px footer
+
 .general-container
 	font-family: $regular-font
 	display: grid
@@ -373,12 +377,13 @@
 	display: block
 	font-family: $lato-Semibold-font
 	color: #afbbbc
+	background-color: #eff2f2
 
 
 .learnMore-form__content-input input
 	font-family: $lato-Semibold-font
 	color: $accent-color
-	background-color: $mainBg-color
+	background-color: #eff2f2
 
 input
 	border: none
@@ -402,7 +407,7 @@ input
 // -------------- Footer ---------------
 
 .footerBg
-	background-color: $lightBg-color
+	background-color: $grey-footerColor
 .footer
 	display: grid
 	align-items: center
@@ -420,6 +425,9 @@ input
 			text-decoration: none
 			font-family: $regular-font
 			color: $accent-color
+
+.footer__copyright
+	color: $grey-footerTextColor
 
 // -----------------------------------
 // ------------ ABOUT ----------------
@@ -469,7 +477,6 @@ input
 
 .loginSection
 .loginSection__titleBg
-	background-color: #fff
 .loginSection__contentBg
 	background-color: $grey-bgColor
 
@@ -491,9 +498,10 @@ input
 	color: #afbbbc
 	font-family: $lato-Semibold-font
 	display: block
-	background-color: #fff
+	background-color: #eff2f2
 .loginForm__input	input
 	display: block
+	background-color: #eff2f2
 
 .loginFormLinks
 	display: grid

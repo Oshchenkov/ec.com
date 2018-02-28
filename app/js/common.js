@@ -14,12 +14,18 @@ $(document).ready(function(){
 
   // Active input in contact form
 
-  $(".learnMore-form__content-input input").focus(function(){
-  	$( this ).parent().addClass("active");
-  	$( this ).focusout(function(){
-	  	$( this ).parent().removeClass("active");
-	  });
-  });
+
+  fieldActiveOnFocus( ".learnMore-form__content-input input" );
+  fieldActiveOnFocus( ".loginForm__input input" );
+
+  function fieldActiveOnFocus ( inputSelector ){
+    $( inputSelector ).focus(function(){
+      $( this ).parent().addClass("active");
+      $( this ).focusout(function(){
+        $( this ).parent().removeClass("active");
+      });
+    });
+  }
 
   // Scroll to element and focus
 

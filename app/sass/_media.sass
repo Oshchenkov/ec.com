@@ -460,13 +460,22 @@
 	.loginForm__input		
 		font-size: 12px
 		padding: 6px 5px 2px 5px
+		border: 1px solid transparent
+		border-bottom: 1px solid #ced7d8
+	.loginForm__input.active
+		background-color: #fff
+		border: 1px solid $mainAccentLighter-color
+	.loginForm__input:last-child
+		border-bottom: 1px solid transparent
+	.loginForm__input.active:last-child
+		border: 1px solid $mainAccentLighter-color
 	.loginForm__input	input
 		font-size: 24px
 		padding: 4px 0 2px 0
 		font-size: 18px
 		padding: 2px 0
-	.loginForm__input:first-child
-		border-bottom: 1px solid #ccc
+	.loginForm__input.active input 
+		background-color: #fff
 
 	.loginFormLinks
 		margin-bottom: 30px
@@ -476,6 +485,7 @@
 	.loginFormLinks__loginBtn
 		padding: 6px 30px
 		font-size: 14px
+
 
 	// -----------------------------------
 	// ----- Check report status ---------
@@ -1035,10 +1045,13 @@
 				grid-auto-flow: column
 			&-li
 			&-a
-				font-size: 12px
-				padding: 10px 24px
+				font-size: 14px
+				padding: 10px 25px
 	.footer__navLinks-li:last-child .footer__navLinks-a
 		padding-right: 0
+
+	.footer__navLinks-nav
+		justify-content: end
 
 	.footer__logo
 		margin: auto
@@ -1083,6 +1096,19 @@
 
 	.loginForm
 		margin-top: 50px
+
+	.loginForm__input
+		padding: 10px 10px 0px 10px
+		border: 2px solid transparent
+		border-bottom: 2px solid #ced7d8
+	.loginForm__input.active
+		border: 2px solid $mainAccentLighter-color
+	.loginForm__input:last-child
+		border-bottom: 2px solid transparent
+	.loginForm__input.active:last-child
+		border: 2px solid $mainAccentLighter-color
+	.loginForm__input input
+		margin-top: 5px
 
 	// -----------------------------------
 	// ----- Check report status ---------
