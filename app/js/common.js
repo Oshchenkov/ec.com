@@ -97,4 +97,41 @@ $(document).ready(function(){
     }
   }
 
+  // About page drop info
+  leadeShipInfo_Open( ".leaderShipBlock__link" );
+  leadeShipInfo_Close(".leaderShipBlock-infoContainer__close");
+
+  function leadeShipInfo_Open ( leadeShipInfo_linkSelector ){
+    $ ( leadeShipInfo_linkSelector ).click(function( event ){
+      event.preventDefault();
+    });
+    $( leadeShipInfo_linkSelector ).focus(function(){
+      $( this ).parent().addClass("active");
+      $( this ).next().fadeIn();
+
+      var dropBlock_height = $( this ).next().height();
+      console.log(dropBlock_height);
+      $( this ).parent().css( "marginBottom", dropBlock_height+"px" );
+
+      $(".leaderShipSection").addClass("active");
+      $( this ).focusout(function(){
+          $( this ).parent().removeClass("active");
+          $( this ).next().fadeOut();
+          $( this ).parent().css( "marginBottom", "0px" );
+          $(".leaderShipSection").removeClass("active");
+      });
+    });
+  }
+  function leadeShipInfo_Close ( leadeShipInfo_closeLinkSelector ){
+    $ ( leadeShipInfo_closeLinkSelector ).click(function( event ){
+      event.preventDefault();
+    });
+    $( leadeShipInfo_closeLinkSelector ).click(function(){
+      $( this ).closest(".leaderShipBlock-infoContainerBg").fadeOut();
+      $( this ).closest(".leaderShipBlock").css( "marginBottom", "0px" );
+      $(".leaderShipSection").removeClass("active");
+      $( this ).closest(".leaderShipBlock").removeClass("active");
+    });
+  }
+
 });

@@ -44,7 +44,11 @@
 		padding: 0 15px
 		overflow: hidden
 	// top-header
-	
+
+	.login .main
+		background-color: $grey-footerColor
+		min-height: calc( 100vh - 36px - 105px ) // 36px - very top header and 280px footer
+
 	.top-header
 		height: 36px
 		overflow: hidden
@@ -72,6 +76,17 @@
 			position: relative
 			display: block
 			height: 36px
+
+	.top-header__loginBar
+		display: grid
+	.login .top-header__loginBar-nav
+		display: grid
+		grid-template-columns: 1fr 1fr
+	.top-header__loginBar-li
+		display: grid
+		justify-self: end
+	.top-header__loginBar-li:last-child
+		justify-self: start
 
 	//    main-header
 
@@ -385,6 +400,7 @@
 	// -------------- Footer ---------------
 
 	.footer
+		margin-top: 20px
 		&__logo
 		&__copyright
 			font-size: 10px
@@ -396,14 +412,20 @@
 			&-a
 				font-size: 12px
 				padding: 10px 24px
+				display: flex
+				justify-content: center
 	.footer__navLinks-li:last-child .footer__navLinks-a
 		padding-right: 0
 
 	.footer__logo
 		margin: 20px 0
+		display: grid
+		justify-content: center
 	.footer__copyright
 		grid-row: 3 / 4
 		margin: 20px 0
+
+	// -----------------------------------------------------------------------
 
 	// -----------------------------------
 	// ------------ ABOUT ----------------
@@ -420,14 +442,48 @@
 	.leaderShipBlock
 		text-decoration: none
 		width: 220px
+	.leaderShipBlock__link
+		text-decoration: none
 
 	.leaderShip__img
-		margin-bottom: 10px
 	.leaderShip__name
 		font-size: 16px
-		margin-bottom: 5px
 	.leaderShip__position
 		font-size: 16px
+
+	//-----------
+	.leaderShipBlock-infoContainer
+		padding-top: 50px
+		padding-bottom: 30px
+
+	.leaderShipBlock.active
+		//margin-bottom: 400px // leaderShipBlock-infoContainer - height
+
+
+	.leaderShipBlock-infoContainer__foto
+		display: none
+	.leaderShipBlock-infoContainer__content
+
+
+	.leaderShipBlock-infoContainer__contentName
+		font-size: 18px
+		display: none
+		margin-bottom: 10px
+	.leaderShipBlock-infoContainer__contentPosition
+		font-size: 16px
+		margin-bottom: 15px
+		display: none
+	.leaderShipBlock-infoContainer__contentText
+		font-size: 14px
+		& p
+	.leaderShipBlock-infoContainer__close
+		top: -40px
+		right: 0
+
+
+
+
+
 
 	// -----------------------------------
 	// ------------ Log In ---------------
@@ -612,6 +668,8 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
 	// top-header
+	.login .main
+		min-height: calc( 100vh - 36px - 125px )
 
 	.top-header
 		grid-template-columns: repeat( 2, 1fr )
@@ -728,9 +786,9 @@
 		grid-template-areas: "header" "main" "footer"
 		//grid-template-rows: [header-row-start] minmax(50px, max-content) [header-row-end mainContent-row-start] minmax( calc( 100vh - 394px ), max-content ) [mainContent-row-end footer-row-start] minmax(30px, max-content) [footer-row-end]
 
-		
-
-
+	.login .main
+		min-height: calc( 100vh - 36px - 280px ) // 36px - very top header and 280px footer
+	
 
 	//    main-header
 	.main-headerMenu-mobile
@@ -1035,6 +1093,7 @@
 
 	.footer
 		height: 280px
+		margin-top: 0
 		grid-template-columns: 30% auto 30%
 		&__logo
 		&__copyright
@@ -1047,6 +1106,8 @@
 			&-a
 				font-size: 14px
 				padding: 10px 25px
+				display: flex
+				justify-content: center
 	.footer__navLinks-li:last-child .footer__navLinks-a
 		padding-right: 0
 
@@ -1054,7 +1115,7 @@
 		justify-content: end
 
 	.footer__logo
-		margin: auto
+		justify-content: start
 	.footer__copyright
 		grid-row: auto
 		margin: auto
@@ -1063,8 +1124,10 @@
 	// -----------------------------------
 	// ------------ ABOUT ----------------
 	// -----------------------------------
-
-
+	
+	.leaderShipSection>.container
+		position: initial
+	
 	.leaderShipSection
 	.leaderShipSection__title
 		font-size: 36px
@@ -1081,6 +1144,39 @@
 	.leaderShip__position
 		font-size: 16px
 
+	//------------------------------
+
+
+
+	.leaderShipBlock-infoContainer
+		max-width: 1050px
+		display: grid
+		grid-template-columns: 200px auto
+		padding: 60px
+
+	.leaderShipBlock-infoContainer__foto
+		display: block
+	.leaderShipBlock-infoContainer__foto.container,
+	.leaderShipBlock-infoContainer__content.container
+		padding-left: 10%
+		padding-right: 10%
+
+
+	.leaderShipBlock-infoContainer__contentName
+		font-size: 18px
+		display: block
+		margin-bottom: 5px
+	.leaderShipBlock-infoContainer__contentPosition
+		font-size: 16px
+		margin-bottom: 15px
+		display: block
+	.leaderShipBlock-infoContainer__contentText
+		font-size: 18px
+		& p
+			margin-bottom: 20px
+	.leaderShipBlock-infoContainer__close
+		top: 10px
+		right: -40px
 
 	// -----------------------------------
 	// ------------ Log In ---------------
@@ -1098,7 +1194,7 @@
 		margin-top: 50px
 
 	.loginForm__input
-		padding: 10px 10px 0px 10px
+		padding: 10px 10px 2px 10px
 		border: 2px solid transparent
 		border-bottom: 2px solid #ced7d8
 	.loginForm__input.active
@@ -1109,6 +1205,7 @@
 		border: 2px solid $mainAccentLighter-color
 	.loginForm__input input
 		margin-top: 5px
+		padding: 0
 
 	// -----------------------------------
 	// ----- Check report status ---------

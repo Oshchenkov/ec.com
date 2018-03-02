@@ -19,7 +19,7 @@
 
 .login .main
 	background-color: $grey-footerColor
-	min-height: calc( 100vh - 36px - 280px ) // 36px - very top header and 280px footer
+	//min-height: calc( 100vh - 36px - 280px ) // 36px - very top header and 280px footer
 
 .general-container
 	font-family: $regular-font
@@ -454,6 +454,60 @@ input
 .leaderShip__position
 	font-family: $light-font
 	color: $grey-color
+
+
+
+// -------------------
+.leaderShipSection.active .leaderShipSection__title,
+.leaderShipSection.active .leaderShipBlock
+	opacity: 0.5
+.leaderShipSection.active .leaderShipBlock.active 
+	opacity: initial
+
+.leaderShipBlock-infoContainerBg
+	display: none
+	margin-top: 30px
+	z-index: 1
+.leaderShipBlock-infoContainerBg
+	background-color: $mainBgLighter-color
+	position: absolute
+	left: 0
+	right: 0
+	//height: 400px
+	text-align: left
+.leaderShipBlock-infoContainerBg *
+	//transition: all .5s ease
+
+.leaderShipBlock-infoContainer
+	padding: 0 15px
+	margin: auto
+
+.leaderShipBlock-infoContainer__content
+	position: relative
+
+.leaderShipBlock-infoContainer__contentName
+	font-family: $bold-font
+	color: $mainAccentLighter-color
+.leaderShipBlock-infoContainer__contentPosition
+	font-family: $regular-font
+	color: $grey-color
+.leaderShipBlock-infoContainer__contentText
+	font-family: $light-font
+	color: $grey-color
+	& p
+.leaderShipBlock-infoContainer__close
+	position: absolute
+	width: 30px
+	height: 30px
+	display: block
+	& img
+		width: 100%
+		height: auto
+		opacity: 0.5
+
+
+
+
 
 // -----------------------------------
 // ------------ Log In ---------------
