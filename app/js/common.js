@@ -101,7 +101,7 @@ $(document).ready(function(){
   // About page drop info
 
   var leaderShipSection         = ".leaderShipSection",
-      leaderShipBlock           = ".leaderShipBlock";
+      leaderShipBlock           = ".leaderShipBlock",
       leaderShipBlock_Active    = ".leaderShipBlock.active",
       leaderShipBlock_FullInfo  = ".leaderShipBlock-infoContainerBg";
 
