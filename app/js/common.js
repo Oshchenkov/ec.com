@@ -10,7 +10,7 @@ $(document).ready(function(){
   	"dots": 							false,
   	"navContainerClass": "owl-nav",
   	 "autoplay": 					true,
-  	 "autoplayTimeout": 		4500
+  	 "autoplayTimeout": 		7500
   });
 
   // Active input in contact form
@@ -101,7 +101,7 @@ $(document).ready(function(){
   // About page drop info
 
   var leaderShipSection         = ".leaderShipSection",
-      leaderShipBlock           = ".leaderShipBlock";
+      leaderShipBlock           = ".leaderShipBlock",
       leaderShipBlock_Active    = ".leaderShipBlock.active",
       leaderShipBlock_FullInfo  = ".leaderShipBlock-infoContainerBg";
 
